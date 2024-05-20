@@ -84,6 +84,9 @@ const size_t NOF_3GPP_TS_28_552_METRICS = 278;
 /// Number of E2SM-KPM metrics defined in O-RAN.WG3.E2SM-KPM-R003-v3.00
 const size_t NOF_ORAN_E2SM_KPM_METRICS = 9;
 
+/// Number of ops KPMs
+const size_t NOF_OPS_KPM_METRICS = 1;
+
 // Measurements defined in 3GPP TS 28.552 V18.23.0 (2023-0306)
 inline span<const e2sm_kpm_metric_t> get_e2sm_kpm_28_552_metrics()
 {
@@ -1762,6 +1765,15 @@ inline span<const e2sm_kpm_metric_t> get_e2sm_kpm_oran_metrics()
   //              values measured for UEs in the cell.
   {"L1M.UL-SRS-RSRP", NRCellDU, DER, REAL, "W", NO_LABEL, E2_NODE_LEVEL | UE_LEVEL}}};
   // clang-format on
+  return metrics;
+}
+
+// OPS KPMs
+inline span<const e2sm_kpm_metric_t> get_ops_kpm_oran_metrics()
+{
+  static const std::array<e2sm_kpm_metric_t, NOF_OPS_KPM_METRICS> metrics ={{
+    {"OPS.CQI", NRCellDU, DER, INTEGER, "-", NO_LABEL, E2_NODE_LEVEL | UE_LEVEL}
+  }};
   return metrics;
 }
 
