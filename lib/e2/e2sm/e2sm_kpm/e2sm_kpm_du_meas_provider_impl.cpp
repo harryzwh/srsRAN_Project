@@ -306,6 +306,8 @@ bool e2sm_kpm_du_meas_provider_impl::get_cqi(const asn1::e2sm::label_info_list_l
   meas_record_item_c meas_record_item;
   meas_record_item.set_integer() = (int)ue_metrics.cqi;
   items.push_back(meas_record_item);
+  items.push_back(meas_record_item);
+  items.push_back(meas_record_item);
   meas_collected = true;
 
   return meas_collected;
