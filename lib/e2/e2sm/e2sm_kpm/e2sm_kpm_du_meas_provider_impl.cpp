@@ -301,7 +301,7 @@ bool e2sm_kpm_du_meas_provider_impl::get_cqi(const asn1::e2sm::label_info_list_l
                                              std::vector<asn1::e2sm::meas_record_item_c>& items)
 {
   bool                 meas_collected = false;
-  scheduler_ue_metrics ue_metrics     = last_ue_metrics[0];
+  // scheduler_ue_metrics ue_metrics     = last_ue_metrics[0];
 
   for (int idx=0;idx<3;idx++){
     meas_record_item_c meas_record_item;
