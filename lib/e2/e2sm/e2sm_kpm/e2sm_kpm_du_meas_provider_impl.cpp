@@ -303,7 +303,7 @@ bool e2sm_kpm_du_meas_provider_impl::get_cqi(const asn1::e2sm::label_info_list_l
   bool                 meas_collected = false;
   scheduler_ue_metrics ue_metrics     = last_ue_metrics[0];
 
-  for (int idx=0;idx<3;idx++){}
+  for (int idx=0;idx<3;idx++){
     meas_record_item_c meas_record_item;
     meas_record_item.set_integer() = idx+10;
     items.push_back(meas_record_item);
