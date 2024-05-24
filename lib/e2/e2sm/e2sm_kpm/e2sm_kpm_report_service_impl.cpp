@@ -158,7 +158,8 @@ bool e2sm_kpm_report_service_style1::collect_measurements()
     if (meas_provider.get_meas_data(
             meas_info.meas_type, meas_info.label_info_list, {}, cell_global_id, meas_records_items)) {
       // Fill measurements data.
-      meas_data_item.meas_record.push_back(meas_records_items[0]);
+      // meas_data_item.meas_record.push_back(meas_records_items[0]);
+      meas_data_item.meas_record.push_back(meas_records_items);
     }
   }
   ric_ind_message.meas_data.push_back(meas_data_item);
